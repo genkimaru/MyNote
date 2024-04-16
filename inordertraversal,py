@@ -1,0 +1,28 @@
+class TreeNode:
+    def __init__(self, value):
+        self.val = value
+        self.left = None
+        self.right = None
+
+def sortedArrayToBST(nums):
+    if not nums:
+        return None
+    
+    mid = len(nums) // 2
+    root = TreeNode(nums[mid])
+    
+    root.left = sortedArrayToBST(nums[:mid])
+    root.right = sortedArrayToBST(nums[mid+1:])
+    
+    return root
+
+def inorderTraversal(root):
+    if root:
+        inorderTraversal(root.left)
+        print(root.val)
+        inorderTraversal(root.right)
+
+# Example usage:
+arr = [1, 2, 3, 4, 5, 6, 7]
+root = sortedArrayToBST(arr)
+inorderTraversal(root)
