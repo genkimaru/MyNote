@@ -1,1 +1,9 @@
-## write every notes in everyday on everywhere for everything 
+# 温故而知新
+## 苟日新日日新
+### 认识你自己
+#### 我思故我在
+----
+#### 我思故我在
+### 认识你自己
+## 苟日新日日新
+# 温故而知新
