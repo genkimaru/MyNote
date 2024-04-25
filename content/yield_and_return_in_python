@@ -1,0 +1,27 @@
+Yes, in Python, a function can use both `yield` and `return` statements. The two statements serve different purposes and can be used together within the same function.
+
+The `yield` statement is used to create a generator function, which can pause and resume the function's execution, allowing the function to generate a sequence of values rather than returning a single value like a regular function.
+
+On the other hand, the `return` statement is used to exit the function and return a value. When a `return` statement is encountered, the function immediately exits and the value is returned to the caller.
+
+Here's an example of a function that uses both `yield` and `return`:
+
+```python
+def example_function():
+    yield 1
+    yield 2
+    return "done"
+```
+
+In this example, the function will yield the values `1` and `2`, and then return the string `"done"`. The function can be used as a generator, where each call to `next()` will return the next yielded value, until the `return` statement is reached, at which point the function will raise a `StopIteration` exception.
+
+Here's how you can use this function:
+
+```python
+gen = example_function()
+print(next(gen))  # Output: 1
+print(next(gen))  # Output: 2
+print(next(gen))  # Output: "done"
+```
+
+In summary, yes, a Python function can use both `yield` and `return` statements, with the `yield` statement being used to create a generator function and the `return` statement being used to exit the function and return a value.
